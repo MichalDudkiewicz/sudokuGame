@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainMenuController">
+    <children>
+        <AnchorPane prefHeight="430.0" prefWidth="250.0" style="-fx-background-color: #ffffcc;">
+            <children>
+                <AnchorPane prefHeight="430.0" prefWidth="70.0" style="-fx-background-color: #e6e600;">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <children>
+                        <SplitMenuButton alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="108.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="250.0" text="%mainMenu.difficultyLevel">
+                            <items>
+                                <MenuItem fx:id="easyButton" mnemonicParsing="false" text="%mainMenu.difficultyLevel.easy" />
+                                <MenuItem fx:id="mediumButton" mnemonicParsing="false" text="%mainMenu.difficultyLevel.medium" />
+                                <MenuItem fx:id="hardButton" mnemonicParsing="false" text="%mainMenu.difficultyLevel.hard" />
+                            </items>
+                            <effect>
+                                <Lighting>
+                                    <bumpInput>
+                                        <Shadow />
+                                    </bumpInput>
+                                    <light>
+                                        <Light.Distant />
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </SplitMenuButton>
+                      <Button alignment="CENTER_RIGHT" contentDisplay="BOTTOM" graphicTextGap="0.0" layoutY="200.0" mnemonicParsing="false" onAction="#quit" prefHeight="46.0" prefWidth="250.0" text="%mainMenu.quit" textAlignment="CENTER">
+                          <effect>
+                              <Lighting>
+                                  <bumpInput>
+                                      <Shadow />
+                                  </bumpInput>
+                                  <light>
+                                      <Light.Distant />
+                                  </light>
+                              </Lighting>
+                          </effect>
+                      </Button>
+                  <Button alignment="CENTER_RIGHT" contentDisplay="BOTTOM" graphicTextGap="0.0" layoutY="154.0" mnemonicParsing="false" onAction="#loadGame" prefHeight="46.0" prefWidth="250.0" text="%mainMenu.loadGame" textAlignment="CENTER">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <RadioButton fx:id="changeLanguage" layoutX="8.0" layoutY="386.0" mnemonicParsing="false" onAction="#changeLanguage" text="PL/EN" />
+                  <Label fx:id="authorsLabel" layoutX="107.0" layoutY="368.0" />
+                    </children>
+                </AnchorPane>
+                <Button alignment="CENTER_RIGHT" contentDisplay="BOTTOM" graphicTextGap="0.0" layoutY="62.0" mnemonicParsing="false" onAction="#startNewGame" prefHeight="46.0" prefWidth="250.0" text="%mainMenu.startGame" textAlignment="CENTER">
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+                            <light>
+                                <Light.Distant />
+                            </light>
+                        </Lighting>
+                    </effect></Button>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <AnchorPane layoutX="250.0" prefHeight="430.0" prefWidth="450.0" style="-fx-background-color: #ffffe6;">
+            <effect>
+                <GaussianBlur />
+            </effect></AnchorPane>
+    </children>
+</AnchorPane>
